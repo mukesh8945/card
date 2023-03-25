@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arima:wght@600&display=swap');
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Arima', cursive;
+            padding: 0px
+        }
+        
+        nav {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        
+        .logo {
+            /* background-color: yellow; */
+            margin-left: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo .in {
+            font-size: 18px;
+            margin-left: -10px;
+        }
+        
+        ul {
+            display: flex;
+            /* background-color: aquamarine; */
+        }
+        
+        .links ul li {
+            margin-right: 20px;
+        }
+        
+        .links ul li a {
+            margin-right: 10px;
+            /* background-color: bisque; */
+            /* padding: 10px; */
+            text-decoration: none;
+            color: whitesmoke;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        
+        .links ul li a:hover {
+            color: yellow;
+        }
+        
+        .in {
+            color: white;
+        }
+        
+        #all {
+            color: rgb(255, 204, 0);
+        }
+        
+        #search {
+            width: 400px;
+            height: 36px;
+            padding: 6px 8px;
+            outline: none;
+            border: none;
+        }
+        
+        .search {
+            background-color: white;
+            padding-left: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        .search select {
+            border: none;
+            outline: none;
+            font-size: 12px;
+            border-top-left-radius: 10px;
+        }
+        
+        .search select option {
+            padding: 5px 10px;
+        }
+        
+        .fa-magnifying-glass {
+            color: black;
+            background-color: rgb(248, 212, 4);
+            font-size: 30px;
+            padding: 8px 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        .search {
+            display: flex;
+        }
+        
+        section {
+            height: 500px;
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top: -250px;
+        }
+        
+        .card {
+            padding: 5px;
+            box-shadow: 2px 2px 3px gray;
+            background-color: white;
+            height: 450px;
+            margin: 5px;
+        }
+        
+        .card-header {
+            font-size: 25px;
+            font-family: arial;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .row {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        
+        .row img {
+            width: 100%;
+        }
+        
+        .row div {
+            margin: 2px;
+        }
+        
+        .card-body {
+            font-family: arial;
+        }
+        
+        .card-footer {
+            font-size: 19px;
+            color: blue;
+            margin-top: 1 0px;
+        }
+        
+        footer {
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        
+        .row-1 {
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+        }
+        
+        .row-2 {
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            margin-top: 50px;
+        }
+        
+        .footer-title {
+            font-weight: bold;
+            color: goldenrod;
+        }
+        
+        .footer-top {
+            background-color: rgb(28, 221, 221);
+            padding: 10px;
+        }
+        
+        .footer-top:hover {
+            background-color: rgb(30, 196, 251);
+            padding: 10px;
+        }
+        
+        .footer-top {
+            text-align: center;
+            margin: 10;
+            margin-top: -1rem;
+        }
+        
+        .copy {
+            text-align: center;
+            background-color: rgb(1, 10, 13);
+            /* padding: 10px; */
+            color: rgb(242, 242, 12);
+        }
+        
+        .copy1 {
+            padding: 10px 0px;
+        }
+        
+        .copy2 {
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+
+        <div class="logo">
+            <img width="100px" src="../public/images/amazon logo.jpg" alt="Company Logo"><span class="in">.in</span>
+        </div>
+        <div class="search">
+            <select>
+                <option value="All - Catagories">All - Catagories</option>
+                <option value="Books">Books</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Phone">Phone</option>
+                <option value="Beauty">Beauty</option>
+            </select>
+            <input type="search" name="" id="search"><i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="links">
+            <ul type="none">
+                <li>
+                    <a id="all" href="#">All</a>
+                </li>
+
+
+                <li>
+                    <a href="#">Best Sellers</a>
+                </li>
+
+                <li>
+                    <a href="#">Mobiles</a>
+                </li>
+                <li>
+                    <a href="#">Customer Service</a>
+                </li>
+                <li>
+                    <a href="#">Fashion</a>
+                </li>
+                <li>
+                    <a href="#">Books</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <header>
+        <img src="../public/images/amazonBanner.jpg" width="100%">
+    </header>
+    <section>
+        <div class="card">
+            <div class="card-header">
+                Home appliances | 10% off on select cards
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../public/images/c1.jpg">
+                        <p1>Air conditioners</p1>
+                    </div>
+                    <div>
+                        <img src="../public/images/c2.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../public/images/c3.jpg">
+                        <p>MicroWaves</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/c4.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                see more..
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Up to 60% off | Professional tools, testing
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../public/images/p1.jpg">
+                        <p>Professional tools</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/p2.jpg">
+                        <p>Measuring insturuments</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/p3.jpg">
+                        <p>Clearing suplies</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/p4.jpg">
+                        <p>Medical supplies</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                see more...
+
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Revamp your home in style
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../public/images/t1.jpg">
+                        <p>Bedsheet,curtains & more</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/t2.jpg">
+                        <p>Home decoraction</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/t3.jpg">
+                        <p>Home storage</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/t4.jpg">
+                        <p>Lighting solutions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                see more....
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Book travel tickets and get exciting offers
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../public/images/a1.jpg">
+                        <p>Get up to ₹2000 off + 2% back on flights</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/a2.jpg">
+                        <p>Zero payment gatway charges</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/a3.jpg">
+                        <p>Get flat 10% back on bus tickets</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/a4.jpg">
+                        <p>Product for your travel needs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                see more....
+            </div>
+
+        </div>
+
+    </section>
+    <footer>
+        <p class="footer-top"> <a href="#">Back to Top</a> </p>
+        <div class="row-1">
+            <div>
+                <div class="footer-title">AbeBooks</div>
+                <div>Books,Art <br> & collectibles
+                </div>
+            </div>
+            <div>
+                <div class="footer-title">Mukesh Web Services</div>
+                <div>Scalable Cloud Computing Services<br></div>
+            </div>
+            <div>
+                <div class="footer-title">Audible</div>
+                <div>Download<br> Audio Books</div>
+            </div>
+            <div>
+                <div class="footer-title">DPReview</div>
+                <div>Digital<br> Photography
+                </div>
+            </div>
+            <div>
+                <div class="footer-title">IMDb</div>
+                <div>Movies, TV<br> & Celebrities</div>
+            </div>
+        </div>
+        <div class="row-2">
+            <div>
+                <div class="footer-title">
+                    Shopbop</div>
+                <div>Designer<br> Fashion Brands</div>
+            </div>
+            <div>
+                <div class="footer-title">Mukesh Business</div>
+                <div>Everything For<br> Your Business</div>
+            </div>
+            <div>
+                <div class="footer-title">Prime Now</div>
+                <div>2-Hour Delivery on Everyday Items</div>
+            </div>
+            <div>
+                <div class="footer-title"> Mukesh Prime Music</div>
+                <div>90 million songs, ad-free<br> Over 15 million podcast episodes</div>
+            </div>
+            <div>
+            </div>
+        </div>
+        <p class="margin-0 copy copy1">copyright &copy;mukeshamazonwebsite.com
+        </p>
+        <p class="margin-0 copy copy2">
+            All Right Reserve | 2022 - 2025
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
